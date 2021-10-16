@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.Emotion_Game.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\ryano\OneDrive\Documents\GitHub\Emotion_Game\Emotion_Game\.idea\.idea.Emotion_Game\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
