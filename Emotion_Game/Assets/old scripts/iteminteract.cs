@@ -9,13 +9,7 @@ public class iteminteract : MonoBehaviour
     [SerializeField] int ID;
     [SerializeField] Canvas canvas; //UI to show the thing
     [SerializeField] Animator animator; //animator to make a sparkle
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
