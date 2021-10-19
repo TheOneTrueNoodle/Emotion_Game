@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Get Player Movement Input
         mx = Input.GetAxisRaw("Horizontal");
         my = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(mx, my).normalized;
@@ -41,5 +42,4 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDirection.x * currentSpeed, moveDirection.y * currentSpeed);
     }
-
 }
