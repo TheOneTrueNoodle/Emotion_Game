@@ -69,6 +69,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         Debug.Log("End of Conversation");
+        StopAllCoroutines();
         dialogueText.text = "";
         talking = false;
     }
