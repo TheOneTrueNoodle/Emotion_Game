@@ -28,6 +28,7 @@ public class DialogueTrigger : MonoBehaviour
 
             if (FindObjectOfType<DialogueManager>().talking == true)
             {
+                FindObjectOfType<DialogueManager>().StopAllCoroutines();
                 FindObjectOfType<DialogueManager>().sentences.Clear();
                 FindObjectOfType<DialogueManager>().dialogueText.text = "";
             }
@@ -52,9 +53,8 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        FindObjectOfType<DialogueManager>().talking = true;
         playerNear = false;
-        
         canvas.SetActive(false);
+        FindObjectOfType<DialogueManager>().talking = true;
     }
 }
