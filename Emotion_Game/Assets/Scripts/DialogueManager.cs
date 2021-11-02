@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text dialogueText;
-    
+
+    public bool finishedTalking;
     public bool talking = false;
     public Queue<string> sentences;
     
@@ -36,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (talking == true)
         {
-            if (Input.GetKeyDown("z"))
+            if (Input.GetKeyDown("z") || Input.GetKeyDown("e"))
             {
                 DisplayNextSentence();
             }
@@ -72,5 +73,6 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         dialogueText.text = "";
         talking = false;
+        finishedTalking = true;
     }
 }

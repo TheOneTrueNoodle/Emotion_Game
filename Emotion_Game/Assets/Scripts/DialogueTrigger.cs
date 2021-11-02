@@ -41,11 +41,16 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (FindObjectOfType<DialogueManager>().talking != true)
             {
-                if (Input.GetKeyDown("z")) //when you press z...
+                if (Input.GetKeyDown("z") || Input.GetKeyDown("e")) //when you press z or E...
                 {
+                    FindObjectOfType<DialogueManager>().finishedTalking = false;
                     TriggerDialogue();
                 }
             }
+        }
+        else if (FindObjectOfType<DialogueManager>().finishedTalking == true)
+        {
+            canvas.SetActive(false);
         }
     }
 
@@ -54,7 +59,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         playerNear = false;
-        canvas.SetActive(false);
         FindObjectOfType<DialogueManager>().talking = true;
     }
 }

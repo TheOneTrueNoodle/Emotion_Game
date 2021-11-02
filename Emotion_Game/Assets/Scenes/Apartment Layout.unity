@@ -5584,19 +5584,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
-      propertyPath: dialogue.sentence.Array.data[1]
       value: '*You attempt to go back to bed* . . . '
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
-      propertyPath: dialogue.sentence.Array.data[2]
+      propertyPath: dialogue.sentence.Array.data[1]
       value: Lockdown has just begun! I have the whole day . . .
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
+      propertyPath: dialogue.sentence.Array.data[2]
+      value: Might aswell enjoy it.
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.name
@@ -5604,7 +5604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.data[3]
-      value: Might aswell enjoy it.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283495, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8087,7 +8087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829853056955204550, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: m_text
-      value: Z
+      value: Z / E
       objectReference: {fileID: 0}
     - target: {fileID: 5829853056955204550, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -8103,15 +8103,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
-      value: 
+      value: '*You look at yourself in the mirror*. . .'
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.data[1]
-      value: '*You look at yourself in the mirror*. . .'
+      value: Fresh
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.name
@@ -8119,7 +8119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283493, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: dialogue.sentence.Array.data[2]
-      value: Fresh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5829853057147283495, guid: 5096b8e6cc633c4499f10db5b53eb439, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12446,6 +12446,10 @@ PrefabInstance:
     - target: {fileID: 4675197433782500653, guid: ba259079491a0bb4191b774a57c06f30, type: 3}
       propertyPath: m_margin.y
       value: -102.75275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675197433842098965, guid: ba259079491a0bb4191b774a57c06f30, type: 3}
+      propertyPath: movementSpeed
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4675197433842098967, guid: ba259079491a0bb4191b774a57c06f30, type: 3}
       propertyPath: m_LocalPosition.x
