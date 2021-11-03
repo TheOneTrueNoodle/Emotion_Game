@@ -181,9 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentence:
-    - Yo this do be a pro gamer moment tho ngl.
-    - I mean seriously how does he do it!
-    name: Green Box
+    - 
+    name: Bedside Book
   canvas: {fileID: 5829853058310820950}
 --- !u!58 &5829853057147283482
 CircleCollider2D:
