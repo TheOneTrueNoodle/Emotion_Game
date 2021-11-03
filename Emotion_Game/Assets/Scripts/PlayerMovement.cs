@@ -40,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveDirection.x * currentSpeed, moveDirection.y * currentSpeed);
+        if (FindObjectOfType<DialogueManager>().talking != true)
+        {
+            rb.velocity = new Vector2(moveDirection.x * currentSpeed, moveDirection.y * currentSpeed);
+        }
     }
 }

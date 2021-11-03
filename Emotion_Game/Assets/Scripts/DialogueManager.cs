@@ -9,14 +9,18 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text dialogueText;
 
+    private float typeSpeed = 0.04f;
+    private bool typingSentence;
     public bool finishedTalking;
     public bool talking = false;
     public Queue<string> sentences;
+    private AudioSource Hum;
     
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        Hum = gameObject.GetComponent<AudioSource>();
     }
 
     public void StartDialogue (Dialogue dialogue)
@@ -39,7 +43,16 @@ public class DialogueManager : MonoBehaviour
         {
             if (Input.GetKeyDown("z") || Input.GetKeyDown("e"))
             {
-                DisplayNextSentence();
+                if (typingSentence == true)
+                {
+                    typeSpeed = (float) 0.001;
+                }
+                else
+                {
+                    typingSentence = true;
+                    typeSpeed = (float) 0.04;
+                    DisplayNextSentence();
+                }
             }
         }
     }
@@ -52,6 +65,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -63,8 +77,13 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds((float) 0.04);
+            if (!Hum.isPlaying)
+            {
+                Hum.Play();
+            }
+            yield return new WaitForSeconds((float) typeSpeed);
         }
+        typingSentence = false;
     }
 
     private void EndDialogue()

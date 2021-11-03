@@ -48,10 +48,10 @@ public class DialogueTrigger : MonoBehaviour
                 }
             }
         }
-        else if (FindObjectOfType<DialogueManager>().finishedTalking == true)
+        /*else if (FindObjectOfType<DialogueManager>().finishedTalking == true)
         {
             canvas.SetActive(false);
-        }
+        }*/
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
@@ -59,6 +59,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         playerNear = false;
+        canvas.SetActive(false);
         FindObjectOfType<DialogueManager>().talking = true;
     }
 }
