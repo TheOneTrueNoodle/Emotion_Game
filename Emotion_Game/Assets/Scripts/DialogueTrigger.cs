@@ -7,6 +7,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     private bool playerNear = false;
+    public AudioSource SoundFX;
     public GameObject canvas;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -61,5 +62,13 @@ public class DialogueTrigger : MonoBehaviour
         playerNear = false;
         canvas.SetActive(false);
         FindObjectOfType<DialogueManager>().talking = true;
+
+        if (SoundFX != null)
+        {
+            if (!SoundFX.isPlaying)
+            {
+                SoundFX.Play();
+            }
+        }
     }
 }
