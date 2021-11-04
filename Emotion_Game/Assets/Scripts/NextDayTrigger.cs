@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class NextDayTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
     private bool playerNear = false;
+    public bool promptOpen = false;
     public AudioSource SoundFX;
     public GameObject canvas;
+    public GameObject prompt;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -26,12 +27,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             playerNear = false;
             canvas.SetActive(false);
-
-            if (FindObjectOfType<DialogueManager>().talking == true)
-            {                FindObjectOfType<DialogueManager>().StopAllCoroutines();
-                FindObjectOfType<DialogueManager>().sentences.Clear();
-                FindObjectOfType<DialogueManager>().dialogueText.text = "";
-            }
         }
     }
 
@@ -39,28 +34,20 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (playerNear == true)
         {
-            if (FindObjectOfType<DialogueManager>().talking != true)
+            if (Input.GetKeyDown("z") || Input.GetKeyDown("e")) //when you press z or E...
             {
-                if (Input.GetKeyDown("z") || Input.GetKeyDown("e")) //when you press z or E...
-                {
-                    FindObjectOfType<DialogueManager>().finishedTalking = false;
-                    TriggerDialogue();
-                }
+                PromptSleep();
             }
         }
-        /*else if (FindObjectOfType<DialogueManager>().finishedTalking == true)
-        {
-            canvas.SetActive(false);
-        }*/
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
-    public void TriggerDialogue()
+    public void PromptSleep()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         playerNear = false;
         canvas.SetActive(false);
-        FindObjectOfType<DialogueManager>().talking = true;
+        prompt.SetActive(true);
+        promptOpen = true;
 
         if (SoundFX != null)
         {
@@ -69,5 +56,17 @@ public class DialogueTrigger : MonoBehaviour
                 SoundFX.Play();
             }
         }
+    }
+
+    public void dontSleep()
+    {
+        prompt.SetActive(false);
+        promptOpen = false;
+    }
+
+    public void Sleep()
+    {
+        prompt.SetActive(false);
+        FindObjectOfType<NextDayScript>().StartTransition();
     }
 }

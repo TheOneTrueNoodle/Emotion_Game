@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Phase 1 Day.unity
+    guid: 0ca29d7d4c195214092c3085946a31a5
+  - enabled: 1
+    path: Assets/Scenes/Phase 1 Night.unity
+    guid: c96f1a514679ad34e9b16b23659321cd
+  - enabled: 1
+    path: Assets/Scenes/Phase 2 Day.unity
+    guid: ac29041a81e41324ab3db4d508aae81c
+  - enabled: 1
+    path: Assets/Scenes/Phase 2 Night.unity
+    guid: 9e464fc65e92bf24fabb1544e11b04d2
+  - enabled: 1
+    path: Assets/Scenes/Phase 3 Day.unity
+    guid: aeab641f61c04b14fa247456789ab5fe
+  - enabled: 1
+    path: Assets/Scenes/Phase 3 Night.unity
+    guid: cd9bef507f4e52a4f8b105c46db21680
   m_configObjects: {}
