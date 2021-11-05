@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text dialogueText;
 
-    private float typeSpeed = 0.04f;
+    private float typeSpeed = 0.02f;
     private bool typingSentence;
     public bool finishedTalking;
     public bool talking = false;
@@ -45,12 +45,11 @@ public class DialogueManager : MonoBehaviour
             {
                 if (typingSentence == true)
                 {
-                    typeSpeed = (float) 0.001;
+                    typeSpeed = (float) 0.02;
                 }
                 else
                 {
-                    typingSentence = true;
-                    typeSpeed = (float) 0.04;
+                    typeSpeed = (float) 0.02;
                     DisplayNextSentence();
                 }
             }
@@ -73,6 +72,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
+        typingSentence = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {

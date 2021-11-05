@@ -12,7 +12,6 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Okay so its getting detected");
         if (other.tag == "Player")
         {
             playerNear = true;
@@ -28,7 +27,8 @@ public class DialogueTrigger : MonoBehaviour
             canvas.SetActive(false);
 
             if (FindObjectOfType<DialogueManager>().talking == true)
-            {                FindObjectOfType<DialogueManager>().StopAllCoroutines();
+            {                
+                FindObjectOfType<DialogueManager>().StopAllCoroutines();
                 FindObjectOfType<DialogueManager>().sentences.Clear();
                 FindObjectOfType<DialogueManager>().dialogueText.text = "";
             }
@@ -48,10 +48,6 @@ public class DialogueTrigger : MonoBehaviour
                 }
             }
         }
-        /*else if (FindObjectOfType<DialogueManager>().finishedTalking == true)
-        {
-            canvas.SetActive(false);
-        }*/
     }
 
     // ReSharper disable Unity.PerformanceAnalysis

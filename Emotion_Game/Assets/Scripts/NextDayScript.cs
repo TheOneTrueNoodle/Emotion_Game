@@ -20,10 +20,9 @@ public class NextDayScript : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         transition.SetTrigger("Start");
-        while (transition.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-        {
-            yield return null;
-        }
+
+        yield return new WaitForSeconds(TransitionTime);
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(NextDay, LoadSceneMode.Additive);
         
         while (!asyncLoad.isDone)

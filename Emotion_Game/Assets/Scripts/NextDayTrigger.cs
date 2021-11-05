@@ -13,7 +13,6 @@ public class NextDayTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Okay so its getting detected");
         if (other.tag == "Player")
         {
             playerNear = true;

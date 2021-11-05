@@ -40,9 +40,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (FindObjectOfType<DialogueManager>().talking != true || FindObjectOfType<NextDayTrigger>().promptOpen != true)
+        if (FindObjectOfType<DialogueManager>().talking != true && FindObjectOfType<NextDayTrigger>().promptOpen != true)
         {
             rb.velocity = new Vector2(moveDirection.x * currentSpeed, moveDirection.y * currentSpeed);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, 0);
         }
     }
 }
