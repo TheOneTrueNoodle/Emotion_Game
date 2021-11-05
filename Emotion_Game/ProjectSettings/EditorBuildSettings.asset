@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase 4 End.unity
     guid: ca9742f7e05636f4583a8cb56c4b0bb3
+  - enabled: 1
+    path: Assets/Scenes/Thanks for playing!.unity
+    guid: 504201cf8d55e2e4799b64a01ce27f9a
   m_configObjects: {}
