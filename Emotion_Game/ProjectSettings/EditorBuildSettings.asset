@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase 3 Night.unity
     guid: cd9bef507f4e52a4f8b105c46db21680
+  - enabled: 1
+    path: Assets/Scenes/Phase 4 End.unity
+    guid: ca9742f7e05636f4583a8cb56c4b0bb3
   m_configObjects: {}

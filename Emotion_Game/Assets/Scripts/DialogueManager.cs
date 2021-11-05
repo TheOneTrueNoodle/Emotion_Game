@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text dialogueText;
 
-    private float typeSpeed = 0.02f;
+    private float typeSpeed = 0.01f;
     private bool typingSentence;
     public bool finishedTalking;
     public bool talking = false;
@@ -45,11 +45,11 @@ public class DialogueManager : MonoBehaviour
             {
                 if (typingSentence == true)
                 {
-                    typeSpeed = (float) 0.02;
+                    typeSpeed = (float) 0.01;
                 }
                 else
                 {
-                    typeSpeed = (float) 0.02;
+                    typeSpeed = (float) 0.01;
                     DisplayNextSentence();
                 }
             }
